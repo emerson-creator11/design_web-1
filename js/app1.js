@@ -25,7 +25,7 @@ ant.addEventListener("click", anterior);
 
 function selecionar(e){
     e.preventDefault();
-    i = cbbox.value;
+    i = Number(cbbox.value);
     imagem.setAttribute("src",`./img/foto${i}.jpg`);
 }
 const cbbox = document.getElementById("combobox");
