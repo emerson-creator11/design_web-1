@@ -51,3 +51,8 @@ li1.addEventListener("mouseover", function(e){
     imagem.setAttribute("src", `./img/foto1.jpg`);
 
 })
+const li2 = document.getElementById("li2");
+li2.addEventListener("mouseover", function(e){
+    e.preventDefault();
+    imagem.setAttribute("src", `./img/foto2.jpg`);
+});
