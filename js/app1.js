@@ -22,3 +22,17 @@ function anterior(e){
 
 const ant = document.getElementById("ant");
 ant.addEventListener("click", anterior);
+
+function selecionar(e){
+    e.preventDefault();
+    i = cbbox.value;
+    imagem.setAttribute("src",`./img/foto${i}.jpg`);
+}
+const cbbox = document.getElementById("combobox");
+cbbox.addEventListener("change", selecionar);
+
+function mudar(e, foto){
+    e.preventDefault();
+    i = foto;
+    imagem.setAttribute("src",`./img/foto${i}.jpg`);
+}
