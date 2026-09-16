@@ -41,6 +41,13 @@ const opacidade =  document.getElementById("opacidade");
 opacidade.addEventListener("input", function(e){
     e.preventDefault();
     let valor = opacidade.value;
-    foto.setAttribute("style", `opacity: ${valor}`);
+    imagem.setAttribute("style", `opacity: ${valor}`);
 
 });
+
+const li1 = document.getElementById("li1");
+li1.addEventListener("mouseover", function(e){
+    e.preventDefault();
+    imagem.setAttribute("src", `./img/foto1.jpg`);
+
+})
