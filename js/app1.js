@@ -36,3 +36,11 @@ function mudar(e, foto){
     i = foto;
     imagem.setAttribute("src",`./img/foto${i}.jpg`);
 }
+
+const opacidade =  document.getElementById("opacidade");
+opacidade.addEventListener("input", function(e){
+    e.preventDefault();
+    let valor = opacidade.value;
+    foto.setAttribute("style", `opacity: ${valor}`);
+
+});
