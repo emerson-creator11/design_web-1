@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 00: Apresentação</title>
+    <title>Aula 09: Agenda de contatos</title>
 </head>
 <body>
-    <h1>Olá, meu nome é Emerson!</h1>
+    <h1>Meus Amigos</h1>
+    
+    <hr>
+
+    <form action="#" id="cadastro" method="post">
+        <table>
+            <tr>
+                <td>nome</td>
+                <td>
+                    <input type="text" required name="nome" minlength="3">
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Data de nascimento
+                </td>
+                <td>
+                    <input type="date" name="nasc">
+                </td>
+                
+            </tr>
+            <tr>
+                <td>whatsapp
+
+                 </td>
+                 <td>
+                    <input type="tel" name=" whatsapp">
+
+                 </td>
+
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="adicionar">
+                    <input type="reset">
+                </td>
+            </tr>
+        </table>
+    </form>
     <h3>Data:18/09/2026</h3>
     <script src="js/app1.js" defer></script>
 </body>
