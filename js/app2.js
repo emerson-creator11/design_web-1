@@ -19,9 +19,19 @@ function exibirLista(){
     let itens = "";
     for(let i = 0; i < amigos.length; i++){
         let item = amigos[i];
-        let li = `<li>${item[0]} | ${item[1]} | ${item[2]} `;
+        let remover = `<button onclick="remover(${i})">Remover</button>`
+        let li = `<li>${item[0]} | ${item[1]} | ${item[2]} | ${remover} </li>`;
         itens = itens + li;
 
     }
     lista.innerHTML = itens;
+}
+
+function remover(i){
+    let item = amigos[i];
+    let check = confirm(`Deseja remover ${item[0]}?`);
+    if (check== true){
+        amigos.splice(i,1);
+    }
+    exibirLista();
 }
