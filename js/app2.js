@@ -5,20 +5,32 @@ const nome = cadastro.nome;
 const nasc = cadastro.nasc;
 const whatsapp = cadastro.whatsapp;
 const lista = document.getElementById("lista");
+let editando = null;
 
 cadastro.addEventListener("submit", function(e){
     e.preventDefault();
     let item = [nome.value, nasc.value, whatsapp.value];
-    let check = amigos.find(item => item [0] == nome.value);
-    if (check == undefined){
-        amigos.unshift(item);
-        cadastro.reset();
-    }else{
+    if (editando == null){
+        let check = amigos.find(item => item [0] == nome.value);
+        if (check == undefined){
+
+            amigos.unshift(item);
+            cadastro.reset();
+        }else{
         alert(`${nome.value } já cadastrado`);
+        }
+    }else{
+         let amigo = amigos[editando]
+         amigo[0] = nome.value;
+         amigo[1] = nasc.value;
+         amigo[2] = whatsapp.value;
+         
     }
-    amigos.unshift(item);
-    cadastro.reset();
+
+
+    
     exibirLista();
+
 
 });
 
