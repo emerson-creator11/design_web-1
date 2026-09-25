@@ -24,7 +24,7 @@ cadastro.addEventListener("submit", function(e){
          amigo[0] = nome.value;
          amigo[1] = nasc.value;
          amigo[2] = whatsapp.value;
-         
+
     }
 
 
@@ -39,7 +39,8 @@ function exibirLista(){
     for(let i = 0; i < amigos.length; i++){
         let item = amigos[i];
         let remover = `<button onclick="remover(${i})">Remover</button>`
-        let li = `<li>${item[0]} | ${item[1]} | ${item[2]} | ${remover} </li>`;
+        let atualizar = `<button onclick="atualizar(${i})">Atualizar</button>`
+        let li = `<li>${item[0]} | ${item[1]} | ${item[2]} | ${remover}  ${atualizar} </li>`;
         itens = itens + li;
 
     }
@@ -53,5 +54,13 @@ function remover(i){
         amigos.splice(i,1);
     }
     exibirLista();
+}
+
+function atualizar(i){
+    editando= i;
+    let item = amigos[editando];
+    nome.value = item[0];
+    nasc.value = item[1];
+    whatsapp.value = item[2];
 }
 
