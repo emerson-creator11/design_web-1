@@ -9,6 +9,13 @@ const lista = document.getElementById("lista");
 cadastro.addEventListener("submit", function(e){
     e.preventDefault();
     let item = [nome.value, nasc.value, whatsapp.value];
+    let check = amigos.find(item => item [0] == nome.value);
+    if (check == undefined){
+        amigos.unshift(item);
+        cadastro.reset();
+    }else{
+        alert(`${nome.value } já cadastrado`);
+    }
     amigos.unshift(item);
     cadastro.reset();
     exibirLista();
@@ -35,3 +42,4 @@ function remover(i){
     }
     exibirLista();
 }
+
