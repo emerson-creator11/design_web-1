@@ -61,4 +61,4 @@ class Passaro extends Animal{
 }
 const balu = new Cachorro("balu brasil");
 const mel = new Cachorro("mel", "amarelo", 1, 10, 45, "Labrador");
-const Ravy = new Passaro("Ravy", "verde", 0.5, 0.1, r="Canário");
+const Ravy = new Passaro("Ravy", undefined,undefined,undefined, r="Canário");
