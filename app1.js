@@ -40,5 +40,15 @@ class Cachorro extends Animal{
         alert("au au");
     }
 }
+class Passaro extends Animal{
+    constructor(n,c="desconhecido",a=0.0,p=0,r="vira-lata") {
+        super(n, c, a, p, r);
+        
+    }
+    falar(){
+        alert("fiu! fiu!");
+    }
+}
 const balu = new Cachorro("balu brasil");
-const mel = new Cachorro("mel", "amarelo", 1, 10, 45, "Labrador")
+const mel = new Cachorro("mel", "amarelo", 1, 10, 45, "Labrador");
+const Ravy = new Passaro("Ravy", "verde", 0.5, 0.1, r="Canário");
