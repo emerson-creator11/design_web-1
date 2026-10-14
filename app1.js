@@ -9,7 +9,8 @@ class Animal {
 
 falar(){
     alert("oi")
-}Comer(kg){
+}
+Comer(kg){
     this.peso += kg;
     alert("comi")
 }
@@ -23,9 +24,21 @@ saudar(){
     msg = msg + `altura: ${this.altura}\n`;
     msg = msg + `peso: ${this.peso}\n`;
     msg = msg + `raça: ${this.raca}\n`;
-    alert(msg)
+    return(msg);
 }
 
+
+
+
 }
-const balu = new Animal("balu brasil");
-const mel = new Animal("mel", "amarelo", 1, 10, 45, "Labrador")
+class Cachorro extends Animal{
+    constructor(n,c="desconhecido",a=0.0,p=0,r="vira-lata") {
+        super(n, c, a, p, r);
+        this.patas = 4;
+    }
+    falar(){
+        alert("au au");
+    }
+}
+const balu = new Cachorro("balu brasil");
+const mel = new Cachorro("mel", "amarelo", 1, 10, 45, "Labrador")
