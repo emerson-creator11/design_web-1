@@ -39,6 +39,11 @@ class Cachorro extends Animal{
     falar(){
         alert("au au");
     }
+    saudar(){
+        let msg = super.saudar();
+        msg = msg+ "sou um cachorro\n";
+        alert(msg);
+    }
 }
 class Passaro extends Animal{
     constructor(n,c="desconhecido",a=0.0,p=0,r="vira-lata") {
@@ -47,6 +52,11 @@ class Passaro extends Animal{
     }
     falar(){
         alert("fiu! fiu!");
+    }
+     saudar(){
+        let msg = super.saudar();
+        msg = msg+ "sou um passaro\n";
+        alert(msg);
     }
 }
 const balu = new Cachorro("balu brasil");
