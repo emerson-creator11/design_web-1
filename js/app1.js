@@ -12,8 +12,12 @@ formulario.addEventListener("submit", function (e){
     for (let i = 0; i<t.length; i++){
         let palavra = t[i];
         palavra = palavra.toUpperCase().trim();
-        if (palavra.includes("#")){
+        if (palavra.startsWith("#")){
             lista.push(palavra);
+        }else if(palavra.includes("#")){
+            let pos=  palavra.indexOf("#");
+            palavra = palavra.slice(0,pos)
+            lista.push(palavra);  
         }
     };
 
