@@ -8,6 +8,14 @@ const tags = document.getElementById("tags");
 formulario.addEventListener("submit", function (e){
     e.preventDefault();
     let t = texto.value;
-    tags.innerHTML = t;
+    t = t.split(" ")
+    for (let i = 0; i<t.length; i++){
+        let palavra = t[i];
+        if (palavra.includes("#")){
+            lista.push(palavra);
+        }
+    };
+
+    tags.innerHTML = lista;
     formulario.reset();
 })
