@@ -11,6 +11,7 @@ formulario.addEventListener("submit", function (e){
     t = t.split(" ")
     for (let i = 0; i<t.length; i++){
         let palavra = t[i];
+        palavra = palavra.toUpperCase().trim();
         if (palavra.includes("#")){
             lista.push(palavra);
         }
