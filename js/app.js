@@ -7,7 +7,8 @@ const saudacao = document.getElementById("saudacao");
 
 cadastro.addEventListener("submit", function (e){
     e.preventDefault();
-    saudacao.innerHTML = `Olá, ${nome.value} hoje é ${hoje}`;
+    let data_formada = `${hoje.getDate()}/${hoje.getMonth() + 1}/${hoje.getFullYear()}`;
+    saudacao.innerHTML = `Olá, ${nome.value} hoje é ${data_formada}`;
     cadastro.reset();
 
 })
