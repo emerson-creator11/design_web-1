@@ -11,3 +11,6 @@ window.addEventListener('scroll', function(e) {
 function destaque(){
     enfase.classList.add("destaque");
 }
+function removerDestaque(){
+    enfase.classList.remove("destaque");
+}
