@@ -10,3 +10,8 @@ h1, h3{
     color: white;
     background-color: black;
 }
+.destaque{
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+}
