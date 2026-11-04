@@ -1,29 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container {
-    max-width: 400px; 
+    max-width: 400px;
     margin: 20px auto;
 }
 
+#cadastro {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#cadastro input {
+    flex: 1;
+}
+
 input, button {
-    display: inline-block;
     border-radius: 5px;
     border: 1px solid lightgray;
-    padding: 5px;
-
-    
+    padding: 8px 10px;
 }
-li {
+
+button {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+#lista {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#lista li {
     list-style: none;
     padding: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
     background-color: lightblue;
     display: flex;
     justify-content: space-between;
-}
-button{
-    background-color: blue;
-    color: white;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-li button{
-    background-color: red ;
+#lista li button {
+    background-color: red;
+    border: none;
+    padding: 6px 10px;
+    margin-left: 10px;
 }
