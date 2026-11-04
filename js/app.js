@@ -9,7 +9,7 @@ cadastro.addEventListener("submit", function(e){
     item.textContent = tarefa.value;
 
     const remover = document.createElement("button");
-    remover.textContent = "remover";
+    remover.textContent = "Remover";
 
     remover.addEventListener("click", function(v){
         v.preventDefault();
