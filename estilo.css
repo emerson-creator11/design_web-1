@@ -11,6 +11,14 @@ input, button {
 
     
 }
+li {
+    list-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+}
 button{
     background-color: blue;
     color: white;
